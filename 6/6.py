@@ -5,8 +5,7 @@ lines = f.readlines()
 
 def solve(race):
     sol = race[0]/2-math.sqrt(race[0]**2/4-race[1])
-    sol = sol + 1 if math.ceil(sol) == sol else math.ceil(sol)
-    return (race[0] - 2*sol + 1)
+    return (race[0] - 2*math.floor(sol+1) + 1)
 
 #part1
 times = list(map(int, lines[0].split(":")[1].split()))
