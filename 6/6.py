@@ -16,5 +16,4 @@ print(numpy.prod(list(map(solve, zip(times, distances)))))
 #part2
 t = int("".join(map(str, times)))
 d = int("".join(map(str, distances)))
-race = (t, d)
-print(solve(race))
+print(solve((t, d)))

@@ -11,12 +11,10 @@ def solve(race):
 #part1
 times = list(map(int, lines[0].split(":")[1].split()))
 distances = list(map(int, lines[1].split(":")[1].split()))
-sols = 1
 print(numpy.prod(list(map(solve, zip(times, distances)))))
-print(sols)
 
 #part2
 t = int("".join(map(str, times)))
 d = int("".join(map(str, distances)))
 race = (t, d)
-print(solve(race))
+print(solve((t, d)))
