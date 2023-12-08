@@ -1,6 +1,7 @@
 import collections
 f = open("7.txt", "r")
-lines = [line.split() for line in f.readlines()]
+
+lines = [line.split("=") for line in f.readlines()]
 
 TYPES = {"HIGHCARD":0, "ONE":1, "TWO":2, "THREE":3, "FULL":4, "FOUR":5, "FIVE":6}
 
