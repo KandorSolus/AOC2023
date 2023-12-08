@@ -1,4 +1,4 @@
-import numpy as np
+import math
 f = open("8.txt", "r")
 dicts = {}
 lines = f.readlines()
@@ -19,12 +19,11 @@ def step(key, stept):
     return key
 
 finished = False
-
+lcm = 1
 for key in keys:
     stept = 0
     while not key.endswith("Z"):
         key = step(key, stept)
         stept += 1
     steps.append(stept)
-
-print(np.lcm.reduce(steps))
+print(math.lcm(*steps))
